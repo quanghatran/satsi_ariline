@@ -1,10 +1,9 @@
 import Slider from "react-slick";
-import partner4 from "../../images/Bamboo-Airways-logo.png";
-import partner1 from "../../images/Hoc_vien_Hang_khongVN.png";
-import partner6 from "../../images/Jetstarairlines.png";
-import partner2 from "../../images/logokent-daihan.png";
-import partner3 from "../../images/pcbv_logo.png";
-import partner5 from "../../images/vj-logo.0f71c68b.svg";
+import partner1 from "../../images/partner1.jpg";
+import partner2 from "../../images/partner2.jpg";
+import partner3 from "../../images/partner3.jpg";
+import partner4 from "../../images/partner4.jpg";
+import partner5 from "../../images/partner5.jpg";
 
 function AppPartners() {
 	const settings = {
@@ -38,17 +37,10 @@ function AppPartners() {
 		// dots: true,
 	};
 
-	const listPartners = [
-		partner1,
-		partner2,
-		partner3,
-		partner4,
-		partner5,
-		partner6,
-	];
+	const listPartners = [partner1, partner2, partner3, partner4, partner5];
 
 	return (
-		<div id='works' className='block worksBlock'>
+		<div id='partner' className='block worksBlock'>
 			<div className='container-fluid'>
 				<div className='titleHolder'>
 					<h2>Đối Tác Chiến Lược</h2>
@@ -56,9 +48,9 @@ function AppPartners() {
 				<Slider {...settings}>
 					{listPartners.map((partner, index) => (
 						<img
-							style={{ width: "100%", height: "150px" }}
+							style={{ width: "100%", height: "100px" }}
 							src={partner}
-							key='index'
+							key={index}
 							alt=''
 						/>
 					))}

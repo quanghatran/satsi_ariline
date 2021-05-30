@@ -252,10 +252,12 @@ hero
 ---- 
 */
 .heroBlock {
-  background: url('assets/images/bg-hero.jpg') no-repeat;
-  background-position: 50% 100%;
+  background: url('images/banner.jpg') no-repeat;
+  background-position: 50%  65%;
   background-size: cover;
+  opacity: 0.95 ;
   height: 100vh;
+  filter: brightness(.9);
 }
 
 .heroBlock .container-fluid {
@@ -276,7 +278,7 @@ hero
 }
 
 .heroBlock .content {
-  max-width: 640px;
+  max-width: 550px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -284,9 +286,10 @@ hero
 }
 
 .heroBlock h3 {
-  font-size: 30px;
+  font-size: 1.5rem;
   line-height: 1.2;
   margin: 0 0 30px;
+  text-transform: uppercase;
 }
 
 .heroBlock p {
@@ -297,15 +300,10 @@ hero
   height: auto !important;
 }
 
-.heroBlock .btnHolder .ant-btn-primary {
-  background-color: #721b00;
-  color:#fff !important;
-  border: 1px solid #721b00;
-}
 
-.heroBlock .btnHolder .ant-btn {
-  background-color: #721b00;
-  color:#fff !important;
+.heroBlock .btn-sign {
+  background-color: none;
+  color:#721b00;
   border: 1px solid #721b00;
 }
 
@@ -350,16 +348,9 @@ about
 how it works
 ------------
 */
-.worksBlock {
-  background: url('images/VIVA-background-office-04.jpg') no-repeat;
-  background-position: 50% 0;
-  background-size: cover;
-  background-attachment: fixed;
-  color: #fff;
-  position: relative;
-}
 
-.worksBlock:before {
+
+/* .worksBlock:before {
   content: '';
   background: rgba(0, 0, 0, 0.5);
   position: absolute;
@@ -367,11 +358,11 @@ how it works
   bottom: 0;
   left: 0;
   right: 0;
-}
+} */
 
-.worksBlock h2 {
+/* .worksBlock h2 {
   color: #fff;
-}
+} */
 
 .worksBlock .contentHolder {
   text-align: center;
@@ -502,8 +493,43 @@ footer
   color: #721b00;
 }
 
+/* .formContactWrapper {
+  display: flex;
+  flex-direction: column;
+} */
 
+/* .formContactWrapper .formContact {
+  border: 1px solid #ddd;
+  font-size: 0.9rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 10px;
+  border-radius: 2;
 
+} */
+
+.formContactWrapper input, .formContactWrapper textarea, .formContactWrapper select  {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+
+.ant-modal-footer {
+  display: none;
+}
+
+.formContactWrapper button {
+  background: #721b00;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  /* border-radius: 8px; */
+  cursor: pointer;
+  margin-top: 10px;
+}
 
 .iconContact {
   color: #fff !important;
@@ -553,6 +579,7 @@ footer
 
 .mobileHidden {
   display: block;
+  font-weight: 500;
 }
 
 .imageStyle {
@@ -721,7 +748,7 @@ li {
 }
 
 
-.stepsBlock .titleHolder:after, .worksBlock .titleHolder:after {
+.stepsBlock .titleHolder:after {
   background: #fff;
 }
 
@@ -772,7 +799,7 @@ li {
 }
 
 .hotBranchBlock .titleHolder:after {
-  background: #721b00!important;
+  background: #fff!important;
 }
 
 .hotBranchBlock:before {
@@ -805,6 +832,11 @@ li {
   position: relative;
   font-size: 1.2rem;
   font-weight: 600;
+}
+
+.resultPopup .ant-modal-content{
+  margin-left: -10px;
+  margin-right: 10px;
 }
 
 

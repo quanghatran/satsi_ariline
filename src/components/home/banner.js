@@ -42,11 +42,26 @@ function AppBanner() {
 									href='#air'
 									type='primary'
 									size='large'
-									style={{ marginRight: "10px" }}
+									style={{
+										marginRight: "10px",
+										backgroundColor: "#721b00",
+										color: "#fff",
+										border: "1px solid #721b00",
+									}}
 								>
 									TÌM HIỂU THÊM
 								</Button>
-								<Button href='#contact' size='large'>
+								<Button
+									className='btn-sign'
+									href='#contact'
+									size='large'
+									style={{
+										marginRight: "10px",
+										color: "#000",
+										background: "transparent",
+										border: "1px solid #000",
+									}}
+								>
 									<i className='fas fa-sign-in-alt'></i> ĐĂNG KÝ
 								</Button>
 							</div>

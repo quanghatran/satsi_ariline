@@ -1,3 +1,4 @@
+import imageIncomes from "../../images/incomes.png";
 import { Col, Row } from "antd";
 const AppIncomes = () => {
 	return (
@@ -10,11 +11,7 @@ const AppIncomes = () => {
 						style={{ background: "#761c1d" }}
 					>
 						<div className=' imageCover'>
-							<img
-								className='imageStyle'
-								src='https://greenway.edu.vn/wp-content/uploads/2020/06/du-h%E1%BB%8Dc-nghe-%C4%91%C6%B0c.png'
-								alt=''
-							/>
+							<img className='imageStyle' src={imageIncomes} alt='' />
 						</div>
 					</Col>
 					<Col sm={{ span: 24 }} md={{ span: 11 }}>

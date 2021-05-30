@@ -1,3 +1,5 @@
+import imageTrend from "../../images/imageTrend.jpg";
+
 import { Col, Row } from "antd";
 const AppTrend = () => {
 	return (
@@ -48,11 +50,7 @@ const AppTrend = () => {
 						style={{ background: "#761c1d" }}
 					>
 						<div className=' imageCover'>
-							<img
-								className='imageStyle'
-								src='https://duhocinec.com/wp-content/uploads/2020/07/01-07-2020-du-hoc-uc-nganh-hang-khong-01.jpg'
-								alt=''
-							/>
+							<img src={imageTrend} className='imageStyle' alt='' />
 						</div>
 					</Col>
 				</Row>

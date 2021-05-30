@@ -26,7 +26,7 @@ function AppHeader() {
 					<div className='mobileHidden'>
 						<Anchor targetOffset='65'>
 							<Link href='#air' title='Ngành Hàng Không' />
-							<Link href='#incomes' title='Thu Nhập' />
+							{/* <Link href='#incomes' title='Thu Nhập' /> */}
 							<Link href='#selections' title='Các Ngành Hot' />
 							<Link href='#conditions' title='Điều Kiện Ứng Tuyển' />
 							<Link href='#steps' title='Các Bước Tham Gia' />
@@ -51,7 +51,7 @@ function AppHeader() {
 						>
 							<Anchor targetOffset='65'>
 								<Link href='#air' title='Ngành Hàng Không' />
-								<Link href='#incomes' title='Thu Nhập' />
+								{/* <Link href='#incomes' title='Thu Nhập' /> */}
 								<Link href='#selections' title='Các Ngành Học' />
 								<Link href='#conditions' title='Điều Kiện Ứng Tuyển' />
 								<Link href='#steps' title='Các Bước Tham Gia' />

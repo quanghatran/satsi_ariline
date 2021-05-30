@@ -331,10 +331,10 @@ const AppHotBranch = () => {
 		<div id='selections' className='block hotBranchBlock'>
 			<div className='container-fluid'>
 				<div className='titleHolder'>
-					<h2 style={{ color: "#721b00" }}>Các Ngành Học Hot</h2>
+					<h2 style={{ color: "#fff" }}>Các Ngành Học Hot</h2>
 				</div>
 				<div className='listJob'>
-					<Row>
+					<Row gutter={[24, 24]}>
 						{listJobs.map((job, index) => (
 							<Col
 								sm={{ span: 24 }}
