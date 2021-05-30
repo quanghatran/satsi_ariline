@@ -37,18 +37,26 @@ function AppHeader() {
 
 					<div className='mobileVisible'>
 						<Button
-							style={{ backgroundColor: "#721b00" }}
+							style={{
+								backgroundColor: "#721b00",
+								border: "1px solid #721b00",
+							}}
 							type='primary'
 							onClick={showDrawer}
 						>
 							<i className='fas fa-bars'></i>
 						</Button>
 						<Drawer
-							placement='right'
-							closable={false}
+							placement='left'
+							closable={true}
 							onClose={onClose}
 							visible={visible}
 						>
+							<img
+								src={logo}
+								alt=''
+								style={{ width: "80%", height: "auto", marginBottom: "1.7rem" }}
+							/>
 							<Anchor targetOffset='65'>
 								<Link href='#air' title='Ngành Hàng Không' />
 								{/* <Link href='#incomes' title='Thu Nhập' /> */}

@@ -1,5 +1,5 @@
 import { BackTop, Col, Row } from "antd";
-import logo from "../../images/logo_satsi.png";
+import logo from "../../images/logo_footer.png";
 
 const AppFooter = () => {
 	return (
@@ -18,7 +18,11 @@ const AppFooter = () => {
 						md={{ span: 12 }}
 					>
 						<div className='logo'>
-							<img src={logo} alt='' />
+							<img
+								style={{ width: "110px", height: "auto" }}
+								src={logo}
+								alt=''
+							/>
 						</div>
 						<h2 style={{ color: "#fff", fontStyle: "italic" }}>
 							LỰA CHỌN VÌ TƯƠNG LAI

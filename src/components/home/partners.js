@@ -18,8 +18,8 @@ function AppPartners() {
 			{
 				breakpoint: 991,
 				settings: {
-					slidesToShow: 2,
-					slidesToScroll: 2,
+					slidesToShow: 3,
+					slidesToScroll: 3,
 					// infinite: true,
 					// dots: true
 				},

@@ -1,35 +1,17 @@
 import { Button, Carousel } from "antd";
 const items = [
 	{
-		key: 1,
+		key: 4,
 		title:
 			"Đào tạo nghiệp vụ hàng không - Chắp cánh ước mơ bước vào ngành hàng không",
 		content:
 			"Hàng ngàn bạn trẻ đã được hiện thực hóa ước mơ làm việc trong ngành Hàng không với mức thu nhập ổn định ngay sau khi ra trường",
 	},
-	{
-		key: 2,
-		title: "Thu nhập hấp dẫn - Vững chắc tương lai",
-		content:
-			"<li>Lĩnh vực triển vọng, rộng mở cơ hội làm việc và du lịch tại nước ngoài</li> <li>Thị trường năng động với 72 hãng hàng không Quốc tế và 5 hãng hàng không Việt Nam</li>",
-	},
-	{
-		key: 3,
-		title: "Cơ hội nghề nghiệp rộng mở với 65 ngành nghề",
-		content:
-			"<li>Môi trường làm việc trẻ trung, năng động, hiện đại và chuyên nghiệp</li><li>Lĩnh vực triển vọng, rộng mở cơ hội làm việc và du lịch tại nước ngoài</li>",
-	},
-	{
-		key: 4,
-		title: "Tiêu chí ứng tuyển đơn giản",
-		content:
-			"Dễ dàng ứng tuyển: Học viên tốt nghiệp THPT trở lên đều đủ điều kiện ứng tuyển. Nghiệp vụ và các kỹ năng mềm sẽ được đào tạo thêm",
-	},
 ];
 
 function AppBanner() {
 	return (
-		<div id='whyChoose' className='heroBlock'>
+		<div id='whyChoose' className='block heroBlock'>
 			<Carousel autoplay next previous>
 				{items.map((item) => (
 					<div className='container-fluid' key={item.key}>

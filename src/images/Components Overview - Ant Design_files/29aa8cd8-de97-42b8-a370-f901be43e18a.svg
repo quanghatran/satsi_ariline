@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>04</title>
+    <desc>Created with Sketch.</desc>
+    <g id="04" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="layout-fill">
+            <rect id="矩形" fill="#000000" fill-rule="nonzero" opacity="0" x="0" y="0" width="32" height="32"></rect>
+            <path d="M12,28.5 L27.5,28.5 C28.053125,28.5 28.5,28.053125 28.5,27.5 L28.5,10.625 L12,10.625 L12,28.5 Z M27.5,3.5 L12,3.5 L12,8.625 L28.5,8.625 L28.5,4.5 C28.5,3.946875 28.053125,3.5 27.5,3.5 Z M3.5,4.5 L3.5,27.5 C3.5,28.053125 3.946875,28.5 4.5,28.5 L10,28.5 L10,3.5 L4.5,3.5 C3.946875,3.5 3.5,3.946875 3.5,4.5 Z" id="形状" fill="#88C4FF" fill-rule="nonzero"></path>
+            <path d="M27.5,3.5 L12,3.5 L12,8.625 L28.5,8.625 L28.5,4.5 C28.5,3.946875 28.053125,3.5 27.5,3.5 Z" id="路径" fill="#89C4FE"></path>
+            <path d="M3.5,4.5 L3.5,27.5 C3.5,28.053125 3.946875,28.5 4.5,28.5 L10,28.5 L10,3.5 L4.5,3.5 C3.946875,3.5 3.5,3.946875 3.5,4.5 Z" id="路径" fill="#49A5FF"></path>
+        </g>
+    </g>
+</svg>

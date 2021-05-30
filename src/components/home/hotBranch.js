@@ -16,19 +16,18 @@ const listJobs = [
 			"<li>Công dân Việt Nam có quốc tịch Việt Nam, lý lịch rõ ràng, sức khỏe tốt</li> <li>Nữ từ 20 đến 26; chiều cao từ 158 cm đến 175 cm</li> <li>Nam từ 20 đến 28; chiều cao từ 168 cm đến 182 cm</li> <li>Tầm với sải tay khi kiễng chân: tối thiểu 212 cm</li><li>Cân nặng phù hợp với chiều cao</li><li>Đã tốt nghiệp THPT</li><li>Tiếng Anh: tối thiểu TOEIC 600/ TOEFL ibt 68/ TOEFL cbt 190/ IELTS 5.5 </li>",
 	},
 	{
+		name: "An ninh hàng không",
+		detail:
+			"Nhân viên an ninh kiểm soát: kiểm tra, giám sát an ninh, tuần tra, canh gác bảo vệ tại các vị trí của sân bay, cảng hàng không...",
+		criteria:
+			"<li>Công dân Việt Nam cư trú tại Việt Nam, lý lịch trong sạch</li> <li>Nam từ 20 - 30 tuổi</li> <li>Đã tốt nghiệp THPT. Ưu tiên học viên đã hoàn thành nghĩa vụ quân sự, công an nghĩa vụ, tốt nghiệp Trung cấp/ Cao đẳng/ ĐH an ninh hàng không</li> <li>Ngoại ngữ: Nhân viên an ninh kiểm soát tối thiểu TOEIC 300 điểm trở lên, nhân viên an ninh soi chiếu TOEIC 450 điểm trở lên</li><li>Sức khỏe: Nam cao từ 1m70 trở lên, nữ từ 1m60. Cân nặng phù hợp với chiều cao.</li><li>Thị lực không kính tối thiểu 5/10 mỗi bên</li>",
+	},
+	{
 		name: "Thanh tra chất lượng",
 		detail:
 			"Xây dựng và điều chỉnh các tiêu chuẩn dịch vụ. Giám sát, kiểm tra, thanh tra chất lượng dịch vụ. Đánh giá và đưa giải pháp nâng cao chất lượng,...",
 		criteria:
 			"<li>Công dân Việt Nam cư trú tại Việt Nam, lý lịch rõ ràng, sức khỏe tốt</li> <li>Từ 26 tuổi trở lên</li> <li>Chiều cao: Nam 1m60 trở lên, nữ 1m56 trở lên</li> <li>Tiếng Anh tối thiểu TOEIC 450 hoặc IELTS 4.5</li>",
-	},
-
-	{
-		name: "An ninh hàng không",
-		detail:
-			"Nhân viên an ninh kiểm soát: kiểm tra, giám sát an ninh, tuần tra, canh gác bảo vệ tại các vị trí của sân bay, cảng hàng không. Nhân viên an ninh soi chiếu: khai thác thiết bị an ninh để phát hiện hành khách và phát hiện, loại bỏ các vật dụng bị cấm mang theo trên chuyến bay. Nhân viên an ninh cơ động: kiểm soát an ninh hàng không, phòng ngừa và đối phó với các sự cố, hành vi bất hợp pháp",
-		criteria:
-			"<li>Công dân Việt Nam cư trú tại Việt Nam, lý lịch trong sạch</li> <li>Nam từ 20 - 30 tuổi</li> <li>Đã tốt nghiệp THPT. Ưu tiên học viên đã hoàn thành nghĩa vụ quân sự, công an nghĩa vụ, tốt nghiệp Trung cấp/ Cao đẳng/ ĐH an ninh hàng không</li> <li>Ngoại ngữ: Nhân viên an ninh kiểm soát tối thiểu TOEIC 300 điểm trở lên, nhân viên an ninh soi chiếu TOEIC 450 điểm trở lên</li><li>Sức khỏe: Nam cao từ 1m70 trở lên, nữ từ 1m60. Cân nặng phù hợp với chiều cao.</li><li>Thị lực không kính tối thiểu 5/10 mỗi bên</li>",
 	},
 
 	{
@@ -378,8 +377,7 @@ const AppHotBranch = () => {
 								{allJobs.map((job, index) => {
 									if (job.key % 3 === 1) {
 										return (
-											<li style={{ listStyle: "inside" }} st key={job.key}>
-												<span style={{ marginRight: "10px" }}></span>{" "}
+											<li style={{ listStyle: "inside" }} key={job.key}>
 												{job.nameJob}
 											</li>
 										);
@@ -393,7 +391,6 @@ const AppHotBranch = () => {
 									if (job.key % 3 === 2) {
 										return (
 											<li style={{ listStyle: "inside" }} key={job.key}>
-												<span style={{ marginRight: "10px" }}>{job.key}.</span>{" "}
 												{job.nameJob}
 											</li>
 										);
@@ -407,7 +404,6 @@ const AppHotBranch = () => {
 									if (job.key % 3 === 0) {
 										return (
 											<li style={{ listStyle: "inside" }} key={job.key}>
-												<span style={{ marginRight: "10px" }}>{job.key}.</span>{" "}
 												{job.nameJob}
 											</li>
 										);

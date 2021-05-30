@@ -4,6 +4,9 @@ const AppIncomes = () => {
 	return (
 		<div id='incomes' className='block blockIncomes'>
 			<div className='container-fluid'>
+				<div className='titleHolder'>
+					<h2>Thu nhập hấp dẫn</h2>
+				</div>
 				<Row justify='space-between'>
 					<Col
 						sm={{ span: 24 }}
@@ -15,8 +18,6 @@ const AppIncomes = () => {
 						</div>
 					</Col>
 					<Col sm={{ span: 24 }} md={{ span: 11 }}>
-						<h2 className='upperCase centerObject'>Thu nhập hấp dẫn</h2>
-
 						<div className='contentIncomes'>
 							<ul className='textAlignJustify'>
 								<li>
