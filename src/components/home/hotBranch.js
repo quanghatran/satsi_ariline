@@ -378,8 +378,8 @@ const AppHotBranch = () => {
 								{allJobs.map((job, index) => {
 									if (job.key % 3 === 1) {
 										return (
-											<li key={job.key}>
-												<span style={{ marginRight: "10px" }}>{job.key}.</span>{" "}
+											<li style={{ listStyle: "inside" }} st key={job.key}>
+												<span style={{ marginRight: "10px" }}></span>{" "}
 												{job.nameJob}
 											</li>
 										);
@@ -392,7 +392,7 @@ const AppHotBranch = () => {
 								{allJobs.map((job, index) => {
 									if (job.key % 3 === 2) {
 										return (
-											<li key={job.key}>
+											<li style={{ listStyle: "inside" }} key={job.key}>
 												<span style={{ marginRight: "10px" }}>{job.key}.</span>{" "}
 												{job.nameJob}
 											</li>
@@ -406,7 +406,7 @@ const AppHotBranch = () => {
 								{allJobs.map((job, index) => {
 									if (job.key % 3 === 0) {
 										return (
-											<li key={job.key}>
+											<li style={{ listStyle: "inside" }} key={job.key}>
 												<span style={{ marginRight: "10px" }}>{job.key}.</span>{" "}
 												{job.nameJob}
 											</li>
