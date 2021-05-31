@@ -40,7 +40,7 @@ function AppPartners() {
 	const listPartners = [partner1, partner2, partner3, partner4, partner5];
 
 	return (
-		<div id='partner' className='block worksBlock'>
+		<div id='partner' className='block worksBlock blockPartners'>
 			<div className='container-fluid'>
 				<div className='titleHolder'>
 					<h2>Đối Tác Chiến Lược</h2>

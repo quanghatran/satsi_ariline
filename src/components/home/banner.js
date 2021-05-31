@@ -24,6 +24,7 @@ function AppBanner() {
 									href='#air'
 									type='primary'
 									size='large'
+									className='buttonSmall'
 									style={{
 										marginRight: "10px",
 										backgroundColor: "#721b00",

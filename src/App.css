@@ -344,10 +344,6 @@ about
   text-align: center;
 }
 
-.worksBlock .test  {
-  background-color: red;
-}
-
 /* 
 how it works
 ------------
@@ -368,6 +364,10 @@ how it works
   color: #fff;
 } */
 
+.worksBlock .slick-slider button {
+  display: none !important;
+}
+
 .worksBlock .contentHolder {
   text-align: center;
 }
@@ -383,6 +383,7 @@ how it works
   width: 110px;
   height: 110px;
 }
+
 
 /* 
 faqs
@@ -737,6 +738,7 @@ li {
   justify-content:center;
   align-items:center;
   flex-direction:column;
+  
 }
 
 .flip-box-back li {
@@ -776,7 +778,7 @@ li {
   transition-delay: .1s;
 }
 
-.worksBlock button {
+.worksblock button {
   display: none !important;
 }
  
@@ -850,6 +852,11 @@ li {
   margin-right: 10px;
 }
 
+.blockPartners {
+  text-align: center;
+  overflow: hidden;
+}
+
 @media only screen and (max-width: 1200px) {
 
   .heroBlock {
@@ -868,8 +875,6 @@ li {
     font-size: 1.4rem;
   }
 
-
-
 }
 
 @media only screen and (max-width: 991px) {
@@ -887,7 +892,8 @@ li {
   }
 
   .worksBlock img {
-    width: 50%!important;
+    width: 60%!important;
+    margin: 0 auto !important
   }
 
   .mobileVisible {
@@ -897,11 +903,23 @@ li {
   .mobileHidden {
     display: none;
   }
+
 }
 
 
 
 @media only screen and (max-width: 767px) {
+  .block {
+    padding: 20px 0;
+  }
+
+  .contentTrend, .contentIncomes {
+    margin-top: 1rem;
+  }
+
+  .footer .sloganTitle {
+    font-size: 1rem;
+  }
 
   .heroBlock {
     background-position: 73% 65% !important;
@@ -938,7 +956,7 @@ li {
   .blockTrend .ant-row-space-between {
     flex-direction: column-reverse;
   }
-  .footer .titleHolder h2 {
+  .footer .titleHolder {
     display: none !important;
   }
 
@@ -947,8 +965,34 @@ li {
   }
 
   .footer .contactWrapper {
-    justify-content: center!important;
+    justify-content: flex-start!important;
   }
 
+  .flip-box-back ul {
+    line-height: 1.2;
+  }
+  
+  .flip-box-back li {
+    font-size: 0.9rem;
+  }
 
+  .copyright a {
+    display: block;
+    width: 100%;
+  }
+  .copyright span {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 325px) {
+  .heroBlock .btn-sign {
+    display: none;
+  }
+
+  .heroBlock .content h3 {
+    margin-bottom: 0;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+  }
 }

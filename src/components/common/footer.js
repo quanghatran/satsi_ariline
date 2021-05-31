@@ -24,7 +24,10 @@ const AppFooter = () => {
 								alt=''
 							/>
 						</div>
-						<h2 style={{ color: "#fff", fontStyle: "italic" }}>
+						<h2
+							className='sloganTitle'
+							style={{ color: "#fff", fontStyle: "italic" }}
+						>
 							LỰA CHỌN VÌ TƯƠNG LAI
 						</h2>
 					</Col>
@@ -61,8 +64,8 @@ const AppFooter = () => {
 				<div className='copyright'>
 					<br />
 					Copyright &copy; 2021 -{" "}
-					<a href='http://satsi.edu.vn/'>www.satsi.edu.vn</a> | Bản quyền thuộc
-					về thương hiệu SATSI
+					<a href='http://satsi.edu.vn/'>www.satsi.edu.vn </a>{" "}
+					<span> | Bản quyền thuộc về thương hiệu SATSI</span>
 				</div>
 				<BackTop>
 					<div className='goTop'>
