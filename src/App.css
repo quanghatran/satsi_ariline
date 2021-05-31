@@ -791,6 +791,7 @@ li {
   border: 1px solid #ddd;
   border-radius: 0 0 20px 20px;
   box-shadow: 0 .5rem .5rem rgba(0,0,0,.15);
+  min-height: 400px;
 }
 
 .testimonialInside:hover {
@@ -856,6 +857,13 @@ li {
   text-align: center;
 }
 
+.worksBlock img {
+  padding: 0 3.7rem;
+  width: 100%;
+  height: auto;
+}
+
+
 @media only screen and (max-width: 1200px) {
 
   .heroBlock {
@@ -891,8 +899,8 @@ li {
   }
 
   .worksBlock img {
-    width: 60%!important;
-    margin: 0 auto !important
+    width: 60%;
+    margin: 0 auto;
   }
 
   .mobileVisible {
@@ -921,7 +929,7 @@ li {
   }
 
   .heroBlock {
-    background-position: 73% 65% !important;
+    background-position: 73% 65%;
   }
    
   .heroBlock h3 {
@@ -992,5 +1000,10 @@ li {
   .heroBlock .content h3 {
     margin-bottom: 0;
     font-size: 1.1rem;
+  }
+
+  
+  .worksBlock img {
+    padding: 0 2rem;
   }
 }

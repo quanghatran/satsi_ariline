@@ -47,12 +47,7 @@ function AppPartners() {
 				</div>
 				<Slider {...settings}>
 					{listPartners.map((partner, index) => (
-						<img
-							style={{ width: "100%", height: "100px" }}
-							src={partner}
-							key={index}
-							alt=''
-						/>
+						<img src={partner} key={index} alt='' />
 					))}
 				</Slider>
 			</div>
