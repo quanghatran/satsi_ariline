@@ -4,6 +4,7 @@ import partner2 from "../../images/partner2.jpg";
 import partner3 from "../../images/partner3.jpg";
 import partner4 from "../../images/partner4.jpg";
 import partner5 from "../../images/partner5.jpg";
+import partner6 from "../../images/vnas.png";
 
 function AppPartners() {
 	const settings = {
@@ -37,7 +38,14 @@ function AppPartners() {
 		// dots: true,
 	};
 
-	const listPartners = [partner1, partner2, partner3, partner4, partner5];
+	const listPartners = [
+		partner1,
+		partner2,
+		partner3,
+		partner4,
+		partner5,
+		partner6,
+	];
 
 	return (
 		<div id='partner' className='block worksBlock blockPartners'>
