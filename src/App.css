@@ -281,7 +281,7 @@ hero
 }
 
 .heroBlock .content {
-  max-width: 450px;
+  max-width: 500px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -290,10 +290,14 @@ hero
 }
 
 .heroBlock h3 {
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   line-height: 1.2;
   margin: 0 0 30px;
   text-transform: uppercase;
+}
+
+.heroBlock ul {
+  font-size: 1rem;
 }
 
 .heroBlock p {
@@ -457,7 +461,7 @@ footer
 ------
 */
 .ant-layout-footer {
-  background: #721b00;
+  background-color: #721b00;
   color: #fff !important;
 }
 
@@ -696,13 +700,13 @@ li {
 }
 
 .conditionsMan .flip-box-front {
-  background: url('images/du-hoc-nam.jpg') no-repeat;
+  background: url('images/phicongnam.jpg') no-repeat;
   background-size: cover;
   background-position: center;
 }
 
 .conditionsWoman .flip-box-front {
-  background: url('images/du-hoc-nu.jpg') no-repeat;
+  background: url('images/tiepviennu.jpg') no-repeat;
   background-size: cover;
   background-position: center;
 }
@@ -807,8 +811,14 @@ li {
 
 .hotBranchBlock {
   position: relative;
+
 }
 
+.modalOverlay .ant-modal-body {
+  background: url('images/backgroundWhite.jpg') no-repeat center;
+}
+
+ 
 .hotBranchBlock:before {
   content: '';
   background: url('images/airplane.jpg') no-repeat;
@@ -861,6 +871,28 @@ li {
   padding: 0 3.7rem;
   width: 100%;
   height: auto;
+}
+
+.resisterModal .ant-modal-content{
+  max-width: 500px!important;
+  margin: 0 auto;
+}
+
+.modalOverlay .ant-modal-content input, .modalOverlay .ant-modal-content textarea, .modalOverlay .ant-modal-content select {
+  background-color: transparent;
+  border: 1px solid #d4d4d4;
+  color: #000;
+}
+
+.resisterModal .formContactWrapper button {
+  margin-top: 1.2rem;
+  font-size: .8rem;
+}
+
+.btnFixed {
+  position: fixed;
+  right: 3rem;
+  bottom: 20%;
 }
 
 
@@ -918,6 +950,10 @@ li {
 @media only screen and (max-width: 767px) {
   .block {
     padding: 20px 0;
+  }
+
+  .ant-modal-header .ant-modal-title {
+    font-size: 1.1rem;
   }
 
   .contentTrend, .contentIncomes {

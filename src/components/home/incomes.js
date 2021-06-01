@@ -1,4 +1,4 @@
-import imageIncomes from "../../images/incomes.png";
+import imageIncomes from "../../images/canghangkhong.jpg";
 import { Col, Row } from "antd";
 const AppIncomes = () => {
 	return (
@@ -22,16 +22,17 @@ const AppIncomes = () => {
 							<ul className='textAlignJustify'>
 								<li>
 									<i className='fas fa-check'></i>
-									Thu nhập của tiếp viên hàng không lên tới 65.000.000 VNĐ/tháng
+									Thu nhập của tiếp viên hàng không lên tới{" "}
+									<b> 65.000.000 VNĐ/tháng</b>
 								</li>
 								<li>
 									<i className='fas fa-check'></i>
-									Thu nhập của phi công lên tới 250.000.000 VNĐ/tháng
+									Thu nhập của phi công lên tới <b> 250.000.000 VNĐ/tháng</b>
 								</li>
 								<li>
 									<i className='fas fa-check'></i>
 									Thu nhập của nhân sự an ninh hàng không, dịch vụ mặt đất, bán
-									vé máy bay,... lên tới 40.000.000 VNĐ/tháng
+									vé máy bay,... lên tới <b> 40.000.000 VNĐ/tháng</b>
 								</li>
 								<li>
 									<i className='fas fa-check'></i>

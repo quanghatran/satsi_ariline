@@ -1,3 +1,4 @@
+import RegisterBtn from "../components/common/registerBtn";
 import AppBanner from "../components/home/banner";
 import AppConditions from "../components/home/conditions";
 import AppContact from "../components/home/contact";
@@ -22,6 +23,7 @@ function AppHome() {
 			<AppPartners />
 			<AppTestimonial />
 			<AppContact />
+			<RegisterBtn />
 		</div>
 	);
 }

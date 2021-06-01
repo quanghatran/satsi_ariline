@@ -366,6 +366,7 @@ const AppHotBranch = () => {
 					</Button>
 				</div>
 				<Modal
+					className='modalOverlay'
 					title='DANH SÁCH CÁC NGÀNH HỌC'
 					visible={isModalVisible}
 					onOk={handleOk}

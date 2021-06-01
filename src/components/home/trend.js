@@ -24,16 +24,18 @@ const AppTrend = () => {
 								</li>
 								<li>
 									<i className='fas fa-check'></i>
-									Thị trường năng động với 72 hãng hàng không Quốc tế và 5 hãng
-									hàng không Việt Nam
+									Thị trường năng động với <b>72 hãng hàng không Quốc tế </b> và
+									<b> 5 hãng hàng không Việt Nam</b>
 								</li>
 								<li>
 									<i className='fas fa-check'></i>
-									Thị trường cần đến 58.000 lao động giai đoạn 2020 - 2025
+									Thị trường cần đến <b> 58.000 lao động</b> giai đoạn 2020 -
+									2025
 								</li>
 								<li>
 									<i className='fas fa-check'></i>
-									22 cảng hàng không và dự kiến mở thêm nhiều sân bay trong nước
+									<b>22 cảng hàng không </b> và dự kiến mở thêm nhiều sân bay
+									trong nước
 								</li>
 								<li>
 									<i className='fas fa-check'></i>

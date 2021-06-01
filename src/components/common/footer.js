@@ -69,7 +69,7 @@ const AppFooter = () => {
 				</div>
 				<BackTop>
 					<div className='goTop'>
-						<i className='fas fa-arrow-circle-up'></i>
+						<i style={{ color: "#000" }} className='fas fa-arrow-circle-up'></i>
 					</div>
 				</BackTop>
 			</div>

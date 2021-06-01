@@ -219,12 +219,18 @@ const AppConditions = () => {
 						onClick={showModal}
 						type='primary'
 						size='large'
-						style={{ backgroundColor: "#721b00", border: "1px solid #721b00" }}
+						style={{
+							backgroundColor: "#721b00",
+							border: "1px solid #721b00",
+							letterSpacing: "1px",
+							fontWeight: "500",
+						}}
 					>
 						THAM GIA SƠ TUYỂN ONLINE
 					</Button>
 				</div>
 				<Modal
+					className='modalOverlay'
 					title='THAM GIA SƠ TUYỂN ONLINE'
 					visible={isModalVisible}
 					onOk={handleOk}
@@ -234,67 +240,97 @@ const AppConditions = () => {
 						className='formContactWrapper formCondition'
 						onSubmit={handleSubmit}
 					>
-						<input
-							className='formContact'
-							type='text'
-							placeholder='Họ tên'
-							required
-							value={name}
-							onChange={(e) => setName(e.target.value)}
-						/>
-						<label>Giới tính: </label>
-						<select value={gender} onChange={(e) => setGender(e.target.value)}>
-							<option value='male'>Nam</option>
-							<option value='female'>Nữ</option>
-						</select>
-						<input
-							className='formContact'
-							type='text'
-							placeholder='Tuổi'
-							required
-							value={age}
-							onChange={(e) => setAge(e.target.value)}
-						/>
-						<input
-							className='formContact'
-							type='number'
-							placeholder='Số điện thoại'
-							required
-							value={phoneNumber}
-							onChange={(e) => setPhoneNumber(e.target.value)}
-						/>
-						<input
-							className='formContact'
-							type='email'
-							placeholder='Địa chỉ email'
-							required
-							value={email}
-							onChange={(e) => setEmail(e.target.value)}
-						/>
-						<input
-							className='formContact'
-							type='text'
-							placeholder='Địa chỉ'
-							required
-							value={address}
-							onChange={(e) => setAddress(e.target.value)}
-						/>
-						<input
-							className='formContact'
-							type='number'
-							placeholder='Chiều cao (cm)'
-							required
-							value={height}
-							onChange={(e) => setHeight(e.target.value)}
-						/>
-						<input
-							className='formContact'
-							type='number'
-							placeholder='Cân nặng (kg)'
-							required
-							value={weight}
-							onChange={(e) => setWeight(e.target.value)}
-						/>
+						<Row gutter={[12, 12]}>
+							<Col xs={{ span: 24 }} sm={{ span: 24 }} md={{ span: 10 }}>
+								<input
+									className='formContact'
+									type='text'
+									placeholder='Họ tên'
+									required
+									value={name}
+									onChange={(e) => setName(e.target.value)}
+								/>
+							</Col>
+							<Col
+								xs={{ span: 16 }}
+								sm={{ span: 16 }}
+								md={{ span: 8 }}
+								style={{ display: "flex", alignItems: "center" }}
+							>
+								<div style={{ width: "40%" }}>Giới tính: </div>
+								<select
+									value={gender}
+									onChange={(e) => setGender(e.target.value)}
+								>
+									<option value='male'>Nam</option>
+									<option value='female'>Nữ</option>
+								</select>
+							</Col>
+							<Col xs={{ span: 8 }} sm={{ span: 8 }} md={{ span: 6 }}>
+								<input
+									className='formContact'
+									type='text'
+									placeholder='Tuổi'
+									required
+									value={age}
+									onChange={(e) => setAge(e.target.value)}
+								/>
+							</Col>
+						</Row>
+						<Row gutter={[12, 12]}>
+							<Col xs={{ span: 12 }} sm={{ span: 12 }} md={{ span: 12 }}>
+								<input
+									className='formContact'
+									type='number'
+									placeholder='Số điện thoại'
+									required
+									value={phoneNumber}
+									onChange={(e) => setPhoneNumber(e.target.value)}
+								/>
+							</Col>
+							<Col xs={{ span: 12 }} sm={{ span: 12 }} md={{ span: 12 }}>
+								<input
+									className='formContact'
+									type='email'
+									placeholder='Địa chỉ email'
+									required
+									value={email}
+									onChange={(e) => setEmail(e.target.value)}
+								/>
+							</Col>
+						</Row>
+						<Row gutter={[12, 12]}>
+							<Col xs={{ span: 24 }} sm={{ span: 24 }} md={{ span: 12 }}>
+								<input
+									className='formContact'
+									type='text'
+									placeholder='Địa chỉ'
+									required
+									value={address}
+									onChange={(e) => setAddress(e.target.value)}
+								/>
+							</Col>
+							<Col xs={{ span: 12 }} sm={{ span: 12 }} md={{ span: 6 }}>
+								<input
+									className='formContact'
+									type='number'
+									placeholder='Chiều cao (cm)'
+									required
+									value={height}
+									onChange={(e) => setHeight(e.target.value)}
+								/>
+							</Col>
+							<Col xs={{ span: 12 }} sm={{ span: 12 }} md={{ span: 6 }}>
+								<input
+									className='formContact'
+									type='number'
+									placeholder='Cân nặng (kg)'
+									required
+									value={weight}
+									onChange={(e) => setWeight(e.target.value)}
+								/>
+							</Col>
+						</Row>
 
 						<Row gutter={[16, 16]}>
 							<Col span={12}>
@@ -363,7 +399,7 @@ const AppConditions = () => {
 						{!isPending && <button>GỬI THÔNG TIN</button>}
 						{isPending && <button disabled>ĐANG GỬI...</button>}
 						<Modal
-							className='resultPopup'
+							className='resultPopup modalOverlay'
 							title='SƠ TUYỂN THÀNH CÔNG'
 							visible={result && resultCondition}
 							onCancel={handleCancelResult}
@@ -375,7 +411,7 @@ const AppConditions = () => {
 							/>
 						</Modal>
 						<Modal
-							className='resultPopup'
+							className='resultPopup modalOverlay'
 							title='SƠ TUYỂN THÀNH CÔNG'
 							visible={result && !resultCondition}
 							onCancel={handleCancelResult}
@@ -385,7 +421,7 @@ const AppConditions = () => {
 								title='Bạn đã gửi thông tin sơ tuyển thành công.'
 								subTitle='Mời bạn tham khảo chương trình “Học Cao đẳng nghề tại CHLB Đức miễn học phí, cam kết việc làm sau tốt nghiệp”'
 								extra={[
-									<Button type='primary' key='console'>
+									<Button type='primary' size='large'>
 										<a href='http://satsi.edu.vn/'>XEM THÊM</a>
 									</Button>,
 								]}

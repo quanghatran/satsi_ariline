@@ -36,7 +36,7 @@ function AppBanner() {
 								</Button>
 								<Button
 									className='btn-sign'
-									href='#contact'
+									href='#conditions'
 									size='large'
 									style={{
 										marginRight: "10px",
@@ -45,31 +45,13 @@ function AppBanner() {
 										border: "1px solid #000",
 									}}
 								>
-									<i className='fas fa-sign-in-alt'></i> ĐĂNG KÝ
+									THAM GIA SƠ TUYỂN
 								</Button>
 							</div>
 						</div>
 					</div>
 				))}
 			</Carousel>
-			{/* <Slider {...settings}>
-				{items.map((item) => (
-					<div className='container-fluid' key={item.key}>
-						<div className='content'>
-							<h3>{item.title}</h3>
-							<p>{item.content}</p>
-							<div className='btnHolder'>
-								<Button type='primary' sizes='large'>
-									Learn More
-								</Button>
-								<Button sizes='large'>
-									<i className='fas fa-desktop'></i> Watch a Demo
-								</Button>
-							</div>
-						</div>
-					</div>
-				))}
-			</Slider> */}
 		</div>
 	);
 }
