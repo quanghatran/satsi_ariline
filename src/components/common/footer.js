@@ -14,8 +14,8 @@ const AppFooter = () => {
 					<Col
 						className='sloganSatsi'
 						xs={{ span: 24 }}
-						sm={{ span: 24 }}
-						md={{ span: 12 }}
+						sm={{ span: 6 }}
+						md={{ span: 6 }}
 					>
 						<div className='logo'>
 							<img
@@ -34,14 +34,14 @@ const AppFooter = () => {
 					<Col
 						className='contactWrapper'
 						xs={{ span: 24 }}
-						sm={{ span: 24 }}
-						md={{ span: 12 }}
-						style={{ display: "flex", justifyContent: "flex-end" }}
+						sm={{ span: 10 }}
+						md={{ span: 10 }}
+						style={{ display: "flex", justifyContent: "center" }}
 					>
 						<ul className='listContact'>
 							<li>
-								<i className='iconContact fas fa-map-pin'></i> 01- BT9 khu Đô
-								thị Văn Khê, Hà Đông, Hà Nội, Việt Nam
+								<i className='iconContact fas fa-map-pin'></i> 01- BT9 KĐT Văn
+								Khê, Hà Đông, Hà Nội
 							</li>
 							<li>
 								<i className='iconContact fas fa-phone-square-alt'></i>024 223
@@ -55,10 +55,26 @@ const AppFooter = () => {
 								satsi.edu@gmail.com
 							</li>
 							<li>
+								<i className='iconContact fab fa-facebook'></i>
+								<a href='https://www.facebook.com/duhocducsatsi'>
+									duhocducsatsi
+								</a>
+							</li>
+							<li>
 								<i className='iconContact fab fa-internet-explorer'></i>
 								<a href='http://satsi.edu.vn/'>www.satsi.edu.vn</a>
 							</li>
 						</ul>
+					</Col>
+					<Col xs={{ span: 24 }} sm={{ span: 8 }} md={{ span: 8 }}>
+						<div>
+							<iframe
+								src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.491141912446!2d105.7590120147541!3d20.97294069505785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313453b311f4c94d%3A0xa84f3ad42d3983bd!2zU0FUU0kgLSBWSeG7hk4gxJDDgE8gVOG6oE8gS0jhu55JIE5HSEnhu4ZQIFbDgCDhu6hORyBE4bukTkcgS0hPQSBI4buMQyBDw5RORyBOR0jhu4YgQ0FP!5e0!3m2!1svi!2s!4v1622221019649!5m2!1svi!2s'
+								width='100%'
+								height='250px'
+								loading='lazy'
+							></iframe>
+						</div>
 					</Col>
 				</Row>
 				<div className='copyright'>

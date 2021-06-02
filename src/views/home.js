@@ -7,6 +7,7 @@ import AppIncomes from "../components/home/incomes";
 import AppPartners from "../components/home/partners";
 import AppSteps from "../components/home/steps";
 import AppTestimonial from "../components/home/testimonial";
+import AppActions from "../components/home/actions";
 import AppTraining from "../components/home/tranings";
 import AppTrend from "../components/home/trend";
 
@@ -22,6 +23,7 @@ function AppHome() {
 			<AppTraining />
 			<AppPartners />
 			<AppTestimonial />
+			<AppActions />
 			<AppContact />
 			<RegisterBtn />
 		</div>

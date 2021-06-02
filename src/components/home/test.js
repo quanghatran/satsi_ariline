@@ -1,5 +1,4 @@
-import { List, Avatar, Button, Skeleton } from "antd";
-
+import { Avatar, Button, List, Skeleton } from "antd";
 import reqwest from "reqwest";
 
 const count = 3;

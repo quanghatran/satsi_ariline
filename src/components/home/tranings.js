@@ -1,6 +1,7 @@
-import { Col, Collapse, Row } from "antd";
-
-const { Panel } = Collapse;
+// const { Panel } = Collapse;
+import { Button, Col, Row } from "antd";
+import { useState } from "react";
+import OnlinePreQua from "../common/onlinePreQua";
 
 const contentTrainings = [
 	{
@@ -24,6 +25,15 @@ const contentTrainings = [
 ];
 
 const AppTraining = () => {
+	const [isModalVisible, setIsModalVisible] = useState(false);
+
+	const showModal = () => {
+		setIsModalVisible(!isModalVisible);
+	};
+
+	const handleCancel = () => {
+		setIsModalVisible(false);
+	};
 	return (
 		<div id='training' className='block trainingBlock'>
 			<div className='container-fluid'>
@@ -46,6 +56,26 @@ const AppTraining = () => {
 						</Col>
 					))}
 				</Row>
+				<div className='centerObject' style={{ marginTop: "40px" }}>
+					<Button
+						onClick={showModal}
+						type='primary'
+						size='large'
+						style={{
+							backgroundColor: "#721b00",
+							border: "1px solid #721b00",
+							letterSpacing: "1px",
+							fontWeight: "500",
+						}}
+					>
+						SƠ TUYỂN ONLINE
+					</Button>
+				</div>
+
+				<OnlinePreQua
+					isModalVisible={isModalVisible}
+					handleCancel={handleCancel}
+				/>
 			</div>
 		</div>
 	);

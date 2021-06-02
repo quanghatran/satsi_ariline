@@ -57,7 +57,7 @@ function RegisterBtn() {
 			<Button
 				size='large'
 				type='primary'
-				className='btnFixed animate__animated animate__bounce  animate__repeat-2 animate__delay-5s'
+				className='btnFixed animate__animated animate__shakeX  animate__repeat-2 animate__delay-5s'
 				onClick={showModal}
 			>
 				ĐĂNG KÝ NGAY

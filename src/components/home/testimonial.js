@@ -1,8 +1,11 @@
 // import React, { Component } from "react";
+import { Button } from "antd";
+import { useState } from "react";
 import Slider from "react-slick";
 import person1 from "../../images/kieuduynam.jpg";
-import person2 from "../../images/quanvananh.png";
 import person3 from "../../images/nguyenhuyhoang.png";
+import person2 from "../../images/quanvananh.png";
+import OnlinePreQua from "../common/onlinePreQua";
 
 const data = [
 	{
@@ -25,6 +28,16 @@ const data = [
 	},
 ];
 const AppTestimonial = () => {
+	const [isModalVisible, setIsModalVisible] = useState(false);
+
+	const showModal = () => {
+		setIsModalVisible(!isModalVisible);
+	};
+
+	const handleCancel = () => {
+		setIsModalVisible(false);
+	};
+
 	const settings = {
 		infinite: true,
 		speed: 500,
@@ -82,6 +95,26 @@ const AppTestimonial = () => {
 						</div>
 					))}
 				</Slider>
+				<div className='centerObject' style={{ marginTop: "40px" }}>
+					<Button
+						onClick={showModal}
+						type='primary'
+						size='large'
+						style={{
+							backgroundColor: "#721b00",
+							border: "1px solid #721b00",
+							letterSpacing: "1px",
+							fontWeight: "500",
+						}}
+					>
+						SƠ TUYỂN ONLINE
+					</Button>
+				</div>
+
+				<OnlinePreQua
+					isModalVisible={isModalVisible}
+					handleCancel={handleCancel}
+				/>
 			</div>
 		</div>
 	);

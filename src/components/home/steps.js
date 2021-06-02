@@ -1,11 +1,17 @@
-// import { useState } from "react";
+import { Button } from "antd";
+import { useState } from "react";
+import OnlinePreQua from "../common/onlinePreQua";
 
 const AppSteps = () => {
-	// const [mode, setMode] = useState("left");
+	const [isModalVisible, setIsModalVisible] = useState(false);
 
-	// const onChange = (e) => {
-	// 	setMode(e.target.value);
-	// };
+	const showModal = () => {
+		setIsModalVisible(!isModalVisible);
+	};
+
+	const handleCancel = () => {
+		setIsModalVisible(false);
+	};
 	return (
 		<div id='steps' className='block stepsBlock'>
 			<div className='container-fluid'>
@@ -39,6 +45,28 @@ const AppSteps = () => {
 						</span>{" "}
 					</p>
 				</div>
+
+				<div className='centerObject' style={{ marginTop: "40px" }}>
+					<Button
+						onClick={showModal}
+						type='primary'
+						size='large'
+						style={{
+							backgroundColor: "#fff",
+							border: "1px solid #000",
+							letterSpacing: "1px",
+							color: "#000",
+							fontWeight: "500",
+						}}
+					>
+						SƠ TUYỂN ONLINE
+					</Button>
+				</div>
+
+				<OnlinePreQua
+					isModalVisible={isModalVisible}
+					handleCancel={handleCancel}
+				/>
 			</div>
 		</div>
 	);

@@ -1,8 +1,16 @@
-import { Button, Col, Modal, Row } from "antd";
+import hotBranch1 from "../../images/phi cong.jpg";
+import hotBranch2 from "../../images/tiep vien hang khong.jpg";
+import hotBranch3 from "../../images/an ninh hang khong.jpg";
+import hotBranch4 from "../../images/thanh tra chat luong.jpg";
+import hotBranch5 from "../../images/kiem soat khong luu.jpg";
+import hotBranch6 from "../../images/bao duong may bay.jpg";
+
+import { Button, Card, Col, Modal, Row } from "antd";
 import React, { useState } from "react";
 const listJobs = [
 	{
 		name: "Phi công",
+		image: hotBranch1,
 		detail:
 			"Lái máy bay vận chuyển hành khách, hàng hóa,... Chuẩn bị, kiểm tra kế hoạch và các vấn đề liên quan tới chuyến bay",
 		criteria:
@@ -10,20 +18,23 @@ const listJobs = [
 	},
 	{
 		name: "Tiếp viên hàng không",
+		image: hotBranch2,
 		detail:
 			"Hướng dẫn, theo dõi an toàn và hỗ trợ cho hành khách trong suốt chuyến bay",
 		criteria:
 			"<li>Công dân Việt Nam có quốc tịch Việt Nam, lý lịch rõ ràng, sức khỏe tốt</li> <li>Nữ từ 20 đến 26; chiều cao từ 158 cm đến 175 cm</li> <li>Nam từ 20 đến 28; chiều cao từ 168 cm đến 182 cm</li> <li>Tầm với sải tay khi kiễng chân: tối thiểu 212 cm</li><li>Cân nặng phù hợp với chiều cao</li><li>Đã tốt nghiệp THPT</li><li>Tiếng Anh: tối thiểu TOEIC 600/ TOEFL ibt 68/ TOEFL cbt 190/ IELTS 5.5 </li>",
 	},
 	{
-		name: "An ninh hàng không",
+		name: "Bảo dưỡng máy bay",
+		image: hotBranch6,
 		detail:
-			"Nhân viên an ninh kiểm soát: kiểm tra, giám sát an ninh, tuần tra, canh gác bảo vệ tại các vị trí của sân bay, cảng hàng không...",
+			"Phát hiện và khắc phục sự cố trước mỗi chuyến bay, theo dõi tình trạng tổng thể của máy bay",
 		criteria:
-			"<li>Công dân Việt Nam cư trú tại Việt Nam, lý lịch trong sạch</li> <li>Nam từ 20 - 30 tuổi</li> <li>Đã tốt nghiệp THPT. Ưu tiên học viên đã hoàn thành nghĩa vụ quân sự, công an nghĩa vụ, tốt nghiệp Trung cấp/ Cao đẳng/ ĐH an ninh hàng không</li> <li>Ngoại ngữ: Nhân viên an ninh kiểm soát tối thiểu TOEIC 300 điểm trở lên, nhân viên an ninh soi chiếu TOEIC 450 điểm trở lên</li><li>Sức khỏe: Nam cao từ 1m70 trở lên, nữ từ 1m60. Cân nặng phù hợp với chiều cao.</li><li>Thị lực không kính tối thiểu 5/10 mỗi bên</li>",
+			"<li>Công dân Việt Nam cư trú tại Việt Nam; lý lịch rõ ràng</li> <li>Tốt nghiệp THPT, Trung cấp chuyên ngành Kỹ thuật Hàng không hoặc Cao đẳng, Đại học các ngành kỹ thuật: cơ khí, Điện, Điện tử…</li> <li>Sức khỏe: Nam: Chiều cao từ 1m60 trở lên, cân nặng từ 50kg trở lên; Nữ: Chiều cao từ 1m56, cân nặng từ 45kg trở lên</li> <li>Có khả năng chịu được áp lực cao trong công việc, làm việc theo ca kíp (ngày và đêm)</li>",
 	},
 	{
 		name: "Thanh tra chất lượng",
+		image: hotBranch4,
 		detail:
 			"Xây dựng và điều chỉnh các tiêu chuẩn dịch vụ. Giám sát, kiểm tra, thanh tra chất lượng dịch vụ. Đánh giá và đưa giải pháp nâng cao chất lượng,...",
 		criteria:
@@ -32,18 +43,19 @@ const listJobs = [
 
 	{
 		name: "Kiểm soát không lưu",
+		image: hotBranch5,
 		detail:
 			"Điều hành, hướng dẫn cho máy bay đi đúng hướng. Hỗ trợ phi công trong các trường hợp khẩn cấp. Theo dõi và nắm rõ lộ trình chuyến bay,...",
 		criteria:
 			"<li>Quốc tịch Việt Nam, lý lịch rõ ràng, sức khỏe tốt</li> <li>Từ 18 - 30 tuổi</li> <li>Tốt nghiệp THPT và đạt các yêu cầu về trình độ</li> <li>Thông minh, nhanh nhạy và có khả năng tập trung cao, phản xạ nhanh</li><li>Sức khỏe: Đối với Nam: Chiều cao ≥ 1m60; Cân nặng ≥ 53 kg; Đối với Nữ: Chiều cao ≥ 1m54; Cân nặng ≥ 45 kg</li>",
 	},
-
 	{
-		name: "Bảo dưỡng máy bay",
+		name: "An ninh hàng không",
+		image: hotBranch3,
 		detail:
-			"Phát hiện và khắc phục sự cố trước mỗi chuyến bay, theo dõi tình trạng tổng thể của máy bay",
+			"Nhân viên an ninh kiểm soát: kiểm tra, giám sát an ninh, tuần tra, canh gác bảo vệ tại các vị trí của sân bay, cảng hàng không...",
 		criteria:
-			"<li>Công dân Việt Nam cư trú tại Việt Nam; lý lịch rõ ràng</li> <li>Tốt nghiệp THPT, Trung cấp chuyên ngành Kỹ thuật Hàng không hoặc Cao đẳng, Đại học các ngành kỹ thuật: cơ khí, Điện, Điện tử…</li> <li>Sức khỏe: Nam: Chiều cao từ 1m60 trở lên, cân nặng từ 50kg trở lên; Nữ: Chiều cao từ 1m56, cân nặng từ 45kg trở lên</li> <li>Có khả năng chịu được áp lực cao trong công việc, làm việc theo ca kíp (ngày và đêm)</li>",
+			"<li>Công dân Việt Nam cư trú tại Việt Nam, lý lịch trong sạch</li> <li>Nam từ 20 - 30 tuổi</li> <li>Đã tốt nghiệp THPT. Ưu tiên học viên đã hoàn thành nghĩa vụ quân sự, công an nghĩa vụ, tốt nghiệp Trung cấp/ Cao đẳng/ ĐH an ninh hàng không</li> <li>Ngoại ngữ: Nhân viên an ninh kiểm soát tối thiểu TOEIC 300 điểm trở lên, nhân viên an ninh soi chiếu TOEIC 450 điểm trở lên</li><li>Sức khỏe: Nam cao từ 1m70 trở lên, nữ từ 1m60. Cân nặng phù hợp với chiều cao.</li><li>Thị lực không kính tối thiểu 5/10 mỗi bên</li>",
 	},
 ];
 
@@ -311,6 +323,8 @@ const allJobs = [
 	},
 ];
 
+const { Meta } = Card;
+
 const AppHotBranch = () => {
 	const [isModalVisible, setIsModalVisible] = useState(false);
 
@@ -342,10 +356,32 @@ const AppHotBranch = () => {
 								gutter={[24, 24]}
 								key={index}
 							>
-								<h3>{job.name}</h3>
+								{/* <h3>{job.name}</h3>
 								<p>
 									<span>Công việc:</span> {job.detail}
-								</p>
+								</p> */}
+
+								<Card
+									hoverable
+									style={{ width: "100%" }}
+									cover={
+										<img
+											style={{
+												height: "200px",
+												objectFit: "cover",
+												position: "center",
+											}}
+											alt='hot_branch'
+											src={job.image}
+										/>
+									}
+								>
+									<Meta
+										style={{ height: "100px", overflow: "hidden" }}
+										title={job.name}
+										description={job.detail}
+									/>
+								</Card>
 							</Col>
 						))}
 					</Row>
@@ -355,7 +391,11 @@ const AppHotBranch = () => {
 						type='primary'
 						size='large'
 						onClick={showModal}
-						style={{ backgroundColor: "#721b00", border: "1px solid #721b00" }}
+						style={{
+							backgroundColor: "#721b00",
+							border: "1px solid #721b00",
+							marginTop: "30px",
+						}}
 					>
 						XEM{" "}
 						<i
@@ -412,6 +452,20 @@ const AppHotBranch = () => {
 								})}
 							</ul>
 						</Col>
+
+						{/* <Col sm={{ span: 24 }} md={{ span: 12 }} lg={{ span: 8 }}>
+							<ul>
+								{allJobs.map((job, index) => {
+									if (job.key % 3 === 0) {
+										return (
+											<li style={{ listStyle: "inside" }} key={job.key}>
+												{job.nameJob}
+											</li>
+										);
+									}
+								})}
+							</ul>
+						</Col> */}
 					</Row>
 				</Modal>
 			</div>
