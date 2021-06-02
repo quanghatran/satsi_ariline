@@ -913,7 +913,7 @@ li {
 
 .btnFixed {
   position: fixed;
-  right: 3rem;
+  right: 1rem;
   bottom: 14%;
   border-radius: 1.5rem;
 }

@@ -294,7 +294,6 @@ function AppContact() {
 						<option value='gg'>Google</option>
 						<option value='fb'>Facebook</option>
 						<option value='person'>Người giới thiệu</option>
-						<option value='different'>Khác</option>
 					</select>
 					{howToKnow === "person" && (
 						<input
