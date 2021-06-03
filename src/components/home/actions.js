@@ -31,7 +31,7 @@ const AppActions = () => {
 		],
 	};
 	return (
-		<div className='block blockTestimonial'>
+		<div id='actions' className='block blockTestimonial'>
 			<div className='container-fluid'>
 				<div className='titleHolder'>
 					<h2>Hoạt động đào tạo</h2>
