@@ -34,7 +34,7 @@ const AppSteps = () => {
 						<b>Bước III</b>
 						<span>
 							Hoàn thiện thủ tục và tham gia chương trình đào tạo trong thời
-							gian tối đa 1 năm (học phí từ 70.000.000 VNĐ/khóa)
+							gian tối đa 1 năm
 						</span>{" "}
 					</p>
 					<p>
