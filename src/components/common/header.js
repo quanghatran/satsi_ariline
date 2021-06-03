@@ -29,8 +29,8 @@ function AppHeader() {
 							{/* <Link href='#incomes' title='Thu Nhập' /> */}
 							<Link href='#selections' title='Các Ngành Hot' />
 							<Link href='#conditions' title='Điều Kiện Ứng Tuyển' />
-							<Link href='#steps' title='Hoạt Động' />
-							<Link href='#training' title='Giai Đoạn Đào Tạo' />
+							<Link href='#steps' title='Các Bước Tham Gia' />
+							<Link href='#actions' title='Hoạt Động' />
 							<Link href='#contact' title='Liên Hệ' />
 						</Anchor>
 					</div>
@@ -62,8 +62,8 @@ function AppHeader() {
 								{/* <Link href='#incomes' title='Thu Nhập' /> */}
 								<Link href='#selections' title='Các Ngành Học' />
 								<Link href='#conditions' title='Điều Kiện Ứng Tuyển' />
-								<Link href='#steps' title='Hoạt Động' />
-								<Link href='#training' title='Giai Đoạn Đào Tạo' />
+								<Link href='#steps' title='Các Bước Tham Gia' />
+								<Link href='#actions' title='Hoạt Động' />
 								<Link href='#contact' title='Liên Hệ' />
 							</Anchor>
 						</Drawer>
