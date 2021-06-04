@@ -2,28 +2,6 @@ import { Button, Col, Modal, Result, Row } from "antd";
 import { useState } from "react";
 
 function AppContact() {
-	const [isModalVisible, setIsModalVisible] = useState(false);
-
-	const showModal = () => {
-		setIsModalVisible(true);
-	};
-
-	// const handleOk = () => {
-	// 	setIsModalVisible(false);
-	// };
-
-	// const handleCancel = () => {
-	// 	setIsModalVisible(false);
-	// };
-
-	const showResult = () => {
-		setResult(true);
-	};
-
-	const handleCancelResult = () => {
-		setResult(false);
-	};
-
 	const [name, setName] = useState("");
 	const [gender, setGender] = useState("male");
 	const [age, setAge] = useState("");
@@ -37,10 +15,21 @@ function AppContact() {
 	const [knowledge, setKnowledge] = useState("hightSchool");
 	const [language, setLanguage] = useState("none");
 	const [howToKnow, setHowToKnow] = useState("gg");
-	const [resultCondition, setResultCondition] = useState(false);
+
+	const [success, setSuccess] = useState(false);
+
 	const [result, setResult] = useState(false);
 	const [isPending, setIsPending] = useState(false);
 	const [namePerson, setNamePerson] = useState("");
+
+	const showResult = (success) => {
+		setResult(true);
+		setSuccess(success);
+	};
+
+	const handleCancelResult = () => {
+		setResult(false);
+	};
 
 	const handleCheckCondition = () => {
 		if (gender === "male") {
@@ -52,10 +41,10 @@ function AppContact() {
 				health === "good"
 			) {
 				console.log(1);
-				return setResultCondition(true);
+				return true;
 			} else {
 				console.log(2);
-				return setResultCondition(false);
+				return false;
 			}
 		}
 		if (gender === "female") {
@@ -66,17 +55,18 @@ function AppContact() {
 				(tattoo === "smallTattoo" || tattoo === "none") &&
 				health === "good"
 			) {
-				return setResultCondition(true);
+				return true;
 			} else {
 				console.log(4);
-				return setResultCondition(false);
+				return false;
 			}
 		}
-		console.log("resultCondition in check function: " + resultCondition);
 	};
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
+
+		const resultCondition = handleCheckCondition();
 
 		const infoCondition = {
 			name,
@@ -96,7 +86,6 @@ function AppContact() {
 			resultCondition,
 		};
 
-		handleCheckCondition();
 		setIsPending(true);
 
 		fetch("http://206.189.90.147:5001/Test", {
@@ -104,10 +93,14 @@ function AppContact() {
 			headers: { "Content-Type": "application/json" },
 			body: JSON.stringify(infoCondition),
 		})
-			.then(() => {
-				// console.log(e);
+			.then((res) => {
+				if (!res.ok) {
+					throw Error("did not post that data to server");
+				}
+				return res.json();
 			})
-			.then(() => {
+			.then((data) => {
+				console.log(data);
 				setIsPending(false);
 
 				// clear fix
@@ -125,10 +118,11 @@ function AppContact() {
 				setLanguage("none");
 				setHowToKnow("gg");
 				setNamePerson("");
-				// setResultCondition(false);
-				showResult();
-
-				console.log("resultCondition in then: " + resultCondition);
+				showResult(resultCondition);
+			})
+			.catch((e) => {
+				setIsPending(false);
+				console.log(e);
 			});
 	};
 
@@ -311,31 +305,27 @@ function AppContact() {
 					<Modal
 						className='resultPopup modalOverlay'
 						title='SƠ TUYỂN THÀNH CÔNG'
-						visible={result && resultCondition}
+						visible={result}
 						onCancel={handleCancelResult}
 					>
-						<Result
-							status='success'
-							title='Chúc mừng bạn đã đáp ứng đủ điều kiện của chương trình'
-							subTitle='Chuyên viên hỗ trợ tư vấn sẽ liên hệ với bạn sớm. Xin cảm ơn!'
-						/>
-					</Modal>
-					<Modal
-						className='resultPopup modalOverlay'
-						title='SƠ TUYỂN THÀNH CÔNG'
-						visible={result && !resultCondition}
-						onCancel={handleCancelResult}
-					>
-						<Result
-							status='success'
-							title='Bạn đã gửi thông tin sơ tuyển thành công.'
-							subTitle='Mời bạn tham khảo chương trình “Học Cao đẳng nghề tại CHLB Đức miễn học phí, cam kết việc làm sau tốt nghiệp”'
-							extra={[
-								<Button type='primary' size='large'>
-									<a href='http://satsi.edu.vn/'>XEM THÊM</a>
-								</Button>,
-							]}
-						/>
+						{success ? (
+							<Result
+								status='success'
+								title='Chúc mừng bạn đã đáp ứng đủ điều kiện của chương trình'
+								subTitle='Chuyên viên hỗ trợ tư vấn sẽ liên hệ với bạn sớm. Xin cảm ơn!'
+							/>
+						) : (
+							<Result
+								status='success'
+								title='Bạn đã gửi thông tin sơ tuyển thành công.'
+								subTitle='Mời bạn tham khảo chương trình “Học Cao đẳng nghề tại CHLB Đức miễn học phí, cam kết việc làm sau tốt nghiệp”'
+								extra={[
+									<Button key='s' type='primary' size='large'>
+										<a href='http://satsi.edu.vn/'>XEM THÊM</a>
+									</Button>,
+								]}
+							/>
+						)}
 					</Modal>
 				</form>
 			</div>

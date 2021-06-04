@@ -2,16 +2,6 @@ import { Modal, Button, Col, Row, Result } from "antd";
 import { useState } from "react";
 
 const OnlinePreQua = (props) => {
-	// const [isModalVisible, setIsModalVisible] = useState(false);
-
-	const showResult = () => {
-		setResult(true);
-	};
-
-	const handleCancelResult = () => {
-		setResult(false);
-	};
-
 	const [name, setName] = useState("");
 	const [gender, setGender] = useState("male");
 	const [age, setAge] = useState("");
@@ -26,11 +16,20 @@ const OnlinePreQua = (props) => {
 	const [language, setLanguage] = useState("none");
 	const [howToKnow, setHowToKnow] = useState("gg");
 
-	const [resultCondition, setResultCondition] = useState(false);
+	const [success, setSuccess] = useState(false);
 
 	const [result, setResult] = useState(false);
 	const [isPending, setIsPending] = useState(false);
 	const [namePerson, setNamePerson] = useState("");
+
+	const showResult = (success) => {
+		setResult(true);
+		setSuccess(success);
+	};
+
+	const handleCancelResult = () => {
+		setResult(false);
+	};
 
 	const handleCheckCondition = () => {
 		if (gender === "male") {
@@ -42,11 +41,10 @@ const OnlinePreQua = (props) => {
 				health === "good"
 			) {
 				console.log(1);
-				setResultCondition(true);
-				console.log(resultCondition);
+				return true;
 			} else {
 				console.log(2);
-				setResultCondition(false);
+				return false;
 			}
 		}
 		if (gender === "female") {
@@ -57,10 +55,10 @@ const OnlinePreQua = (props) => {
 				(tattoo === "smallTattoo" || tattoo === "none") &&
 				health === "good"
 			) {
-				setResultCondition(true);
+				return true;
 			} else {
 				console.log(4);
-				setResultCondition(false);
+				return false;
 			}
 		}
 	};
@@ -68,7 +66,7 @@ const OnlinePreQua = (props) => {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 
-		handleCheckCondition();
+		const resultCondition = handleCheckCondition();
 
 		const infoCondition = {
 			name,
@@ -90,17 +88,19 @@ const OnlinePreQua = (props) => {
 
 		setIsPending(true);
 
-		console.log(infoCondition);
-
 		fetch("http://206.189.90.147:5001/Test", {
 			method: "POST",
 			headers: { "Content-Type": "application/json" },
 			body: JSON.stringify(infoCondition),
 		})
-			.then(() => {
-				// console.log(e);
+			.then((res) => {
+				if (!res.ok) {
+					throw Error("did not post that data to server");
+				}
+				return res.json();
 			})
-			.then(() => {
+			.then((data) => {
+				console.log(data);
 				setIsPending(false);
 
 				// clear fix
@@ -118,9 +118,11 @@ const OnlinePreQua = (props) => {
 				setLanguage("none");
 				setHowToKnow("gg");
 				setNamePerson("");
-				showResult();
-
-				// setResultCondition(false);
+				showResult(resultCondition);
+			})
+			.catch((e) => {
+				setIsPending(false);
+				console.log(e);
 			});
 	};
 
@@ -291,24 +293,20 @@ const OnlinePreQua = (props) => {
 
 				{!isPending && <button>GỬI THÔNG TIN</button>}
 				{isPending && <button disabled>ĐANG GỬI...</button>}
-				<Modal
-					className='resultPopup modalOverlay'
-					title='SƠ TUYỂN THÀNH CÔNG'
-					visible={result && resultCondition}
-					onCancel={handleCancelResult}
-				>
+			</form>
+			<Modal
+				className='resultPopup modalOverlay'
+				title='SƠ TUYỂN THÀNH CÔNG'
+				visible={result}
+				onCancel={handleCancelResult}
+			>
+				{success ? (
 					<Result
 						status='success'
 						title='Chúc mừng bạn đã đáp ứng đủ điều kiện của chương trình'
 						subTitle='Chuyên viên hỗ trợ tư vấn sẽ liên hệ với bạn sớm. Xin cảm ơn!'
 					/>
-				</Modal>
-				<Modal
-					className='resultPopup modalOverlay'
-					title='SƠ TUYỂN THÀNH CÔNG'
-					visible={result && !resultCondition}
-					onCancel={handleCancelResult}
-				>
+				) : (
 					<Result
 						status='success'
 						title='Bạn đã gửi thông tin sơ tuyển thành công.'
@@ -319,8 +317,8 @@ const OnlinePreQua = (props) => {
 							</Button>,
 						]}
 					/>
-				</Modal>
-			</form>
+				)}
+			</Modal>
 		</Modal>
 	);
 };
