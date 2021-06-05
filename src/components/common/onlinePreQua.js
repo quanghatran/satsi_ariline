@@ -3,17 +3,17 @@ import { useState } from "react";
 
 const OnlinePreQua = (props) => {
 	const [name, setName] = useState("");
-	const [gender, setGender] = useState("male");
+	const [gender, setGender] = useState("nam");
 	const [age, setAge] = useState("");
 	const [phoneNumber, setPhoneNumber] = useState("");
 	const [email, setEmail] = useState("");
 	const [address, setAddress] = useState("");
 	const [height, setHeight] = useState("");
 	const [weight, setWeight] = useState("");
-	const [health, setHealth] = useState("good");
-	const [tattoo, setTattoo] = useState("none");
-	const [knowledge, setKnowledge] = useState("hightSchool");
-	const [language, setLanguage] = useState("none");
+	const [health, setHealth] = useState("tốt");
+	const [tattoo, setTattoo] = useState("Không có");
+	const [knowledge, setKnowledge] = useState("THPT");
+	const [language, setLanguage] = useState("Chưa có chứng chỉ");
 	const [howToKnow, setHowToKnow] = useState("gg");
 
 	const [success, setSuccess] = useState(false);
@@ -32,13 +32,13 @@ const OnlinePreQua = (props) => {
 	};
 
 	const handleCheckCondition = () => {
-		if (gender === "male") {
+		if (gender === "nam") {
 			if (
 				18 <= age <= 35 &&
 				168 <= height <= 185 &&
 				weight >= 60 &&
-				(tattoo === "smallTattoo" || tattoo === "none") &&
-				health === "good"
+				(tattoo === "Không có" || tattoo === "Nhỏ, ở vị trí kín") &&
+				health === "tốt"
 			) {
 				console.log(1);
 				return true;
@@ -47,13 +47,13 @@ const OnlinePreQua = (props) => {
 				return false;
 			}
 		}
-		if (gender === "female") {
+		if (gender === "nữ") {
 			if (
 				18 <= age <= 26 &&
 				158 <= height <= 175 &&
 				weight >= 45 &&
-				(tattoo === "smallTattoo" || tattoo === "none") &&
-				health === "good"
+				(tattoo === "Không có" || tattoo === "Nhỏ, ở vị trí kín") &&
+				health === "tốt"
 			) {
 				return true;
 			} else {
@@ -105,17 +105,17 @@ const OnlinePreQua = (props) => {
 
 				// clear fix
 				setName("");
-				setGender("male");
+				setGender("nam");
 				setAge("");
 				setPhoneNumber("");
 				setEmail("");
 				setAddress("");
 				setHeight("");
 				setWeight("");
-				setHealth("good");
-				setTattoo("none");
-				setKnowledge("hightSchool");
-				setLanguage("none");
+				setHealth("tốt");
+				setTattoo("Không có");
+				setKnowledge("THPT");
+				setLanguage("Chưa có chứng chỉ");
 				setHowToKnow("gg");
 				setNamePerson("");
 				showResult(resultCondition);
@@ -156,8 +156,8 @@ const OnlinePreQua = (props) => {
 					>
 						<div style={{ width: "40%" }}>Giới tính: </div>
 						<select value={gender} onChange={(e) => setGender(e.target.value)}>
-							<option value='male'>Nam</option>
-							<option value='female'>Nữ</option>
+							<option value='nam'>Nam</option>
+							<option value='nữ'>Nữ</option>
 						</select>
 					</Col>
 					<Col xs={{ span: 8 }} sm={{ span: 8 }} md={{ span: 6 }}>
@@ -230,8 +230,8 @@ const OnlinePreQua = (props) => {
 						{" "}
 						<label>Sức khỏe: </label>
 						<select value={health} onChange={(e) => setHealth(e.target.value)}>
-							<option value='good'>Tốt</option>
-							<option value='trouble'>
+							<option value='tốt'>Tốt</option>
+							<option value='Mắc bệnh truyền nhiễm'>
 								Mắc bệnh truyền nhiễm: Viên gan B/C, HIV,…
 							</option>
 						</select>
@@ -239,9 +239,11 @@ const OnlinePreQua = (props) => {
 					<Col span={12}>
 						<label>Xăm hình: </label>
 						<select value={tattoo} onChange={(e) => setTattoo(e.target.value)}>
-							<option value='none'>Không có</option>
-							<option value='smallTattoo'>Nhỏ, ở vị trí kín</option>
-							<option value='bigTattoo'>Lớn, ở vị trí dễ nhận biết</option>
+							<option value='Không có'>Không có</option>
+							<option value='Nhỏ, ở vị trí kín'>Nhỏ, ở vị trí kín</option>
+							<option value='Lớn, ở vị trí dễ nhận biết'>
+								Lớn, ở vị trí dễ nhận biết
+							</option>
 						</select>
 					</Col>
 
@@ -251,9 +253,9 @@ const OnlinePreQua = (props) => {
 							value={knowledge}
 							onChange={(e) => setKnowledge(e.target.value)}
 						>
-							<option value='hightSchool'>THPT</option>
-							<option value='vocational'>Cao đẳng</option>
-							<option value='university'>Đại học</option>
+							<option value='THPT'>THPT</option>
+							<option value='Cao đẳng'>Cao đẳng</option>
+							<option value='Đại học'>Đại học</option>
 						</select>
 					</Col>
 					<Col span={12}>
@@ -262,9 +264,13 @@ const OnlinePreQua = (props) => {
 							value={language}
 							onChange={(e) => setLanguage(e.target.value)}
 						>
-							<option value='none'>Chưa có chứng chỉ</option>
-							<option value='toeic300'>Tương đương Toeic 300</option>
-							<option value='toeic450'>Tương đương Toeic 450 trở lên</option>
+							<option value='Chưa có chứng chỉ'>Chưa có chứng chỉ</option>
+							<option value='Tương đương Toeic 300'>
+								Tương đương Toeic 300
+							</option>
+							<option value='Tương đương Toeic 450 trở lên'>
+								Tương đương Toeic 450 trở lên
+							</option>
 						</select>
 					</Col>
 				</Row>
