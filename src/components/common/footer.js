@@ -49,9 +49,7 @@ const AppFooter = () => {
 							</li>
 							<li>
 								<i className='iconContact fas fa-phone-volume'></i> 097 8586 755
-							</li>
-							<li>
-								<i className='iconContact fas fa-phone-volume'></i> 0962 917 755
+								- 0962 917 755
 							</li>
 							<li>
 								<i className=' iconContact far fa-envelope'></i>{" "}
