@@ -31,6 +31,8 @@ const OnlinePreQua = (props) => {
 		setResult(false);
 	};
 
+	let url = process.env.REACT_APP_API_URL;
+
 	const handleCheckCondition = () => {
 		if (gender === "nam") {
 			if (
@@ -88,7 +90,7 @@ const OnlinePreQua = (props) => {
 
 		setIsPending(true);
 
-		fetch("http://206.189.90.147:5001/Test", {
+		fetch(`${url}/Test`, {
 			method: "POST",
 			headers: { "Content-Type": "application/json" },
 			body: JSON.stringify(infoCondition),

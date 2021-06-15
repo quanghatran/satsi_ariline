@@ -17,7 +17,7 @@ const AppConditions = () => {
 		<div id='conditions' className='block blockConditions'>
 			<div className='container-fluid'>
 				<div className='titleHolder'>
-					<h2>ĐIỀU KIỆN ỨNG TUYỂN</h2>
+					<h1>ĐIỀU KIỆN ỨNG TUYỂN</h1>
 				</div>
 				<Row gutter={[24, 24]} justify='space-between'>
 					<Col

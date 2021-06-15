@@ -65,7 +65,7 @@ const AppTestimonial = () => {
 		<div className='block blockTestimonial'>
 			<div className='container-fluid'>
 				<div className='titleHolder'>
-					<h2>Cảm Nhận Học Viên</h2>
+					<h1>Cảm Nhận Học Viên</h1>
 					<p>
 						Hàng ngàn bạn trẻ đã được hiện thực hóa ước mơ làm việc trong ngành
 						Hàng không với mức thu nhập ổn định ngay sau khi ra trường

@@ -16,7 +16,7 @@ const AppSteps = () => {
 		<div id='steps' className='block stepsBlock'>
 			<div className='container-fluid'>
 				<div className='titleHolder'>
-					<h2 style={{ color: "#fff" }}>CÁC BƯỚC THAM GIA</h2>
+					<h1 style={{ color: "#fff" }}>CÁC BƯỚC THAM GIA</h1>
 				</div>
 				<div className='listStepBlock'>
 					<p>

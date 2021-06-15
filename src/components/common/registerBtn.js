@@ -23,6 +23,8 @@ function RegisterBtn() {
 	const [isPending, setIsPending] = useState(false);
 	const [success, setSuccess] = useState(false);
 
+	let url = process.env.REACT_APP_API_URL;
+
 	const handleSubmit = (e) => {
 		e.preventDefault();
 
@@ -30,7 +32,7 @@ function RegisterBtn() {
 
 		setIsPending(true);
 
-		fetch("http://206.189.90.147:5001/Contact", {
+		fetch(`${url}/Contact`, {
 			method: "POST",
 			headers: { "Content-Type": "application/json" },
 			body: JSON.stringify(infoContact),

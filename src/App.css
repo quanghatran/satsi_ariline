@@ -62,7 +62,7 @@ title holder
   width: 50px;
 }
 
-.titleHolder h2 {
+.titleHolder h1 {
   font-size: 28px;
   margin: 0;
   text-transform: uppercase;
@@ -932,7 +932,7 @@ li {
   }
 
 
-  .titleHolder h2 {
+  .titleHolder h1 {
     font-size: 23px
   }
   .blockTestimonial .ant-row > div:nth-child(2) .ant-list-item {

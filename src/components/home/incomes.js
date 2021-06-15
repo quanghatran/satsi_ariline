@@ -18,7 +18,7 @@ const AppIncomes = () => {
 		<div id='incomes' className='block blockIncomes'>
 			<div className='container-fluid'>
 				<div className='titleHolder'>
-					<h2>Thu nhập hấp dẫn</h2>
+					<h1>Thu nhập hấp dẫn</h1>
 				</div>
 				<Row justify='space-between'>
 					<Col

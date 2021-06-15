@@ -38,7 +38,7 @@ const AppTraining = () => {
 		<div id='training' className='block trainingBlock'>
 			<div className='container-fluid'>
 				<div className='titleHolder'>
-					<h2>GIAI ĐOẠN ĐÀO TẠO</h2>
+					<h1>GIAI ĐOẠN ĐÀO TẠO</h1>
 				</div>
 				<Row gutter={[24, 24]}>
 					{contentTrainings.map((contentTraining) => (

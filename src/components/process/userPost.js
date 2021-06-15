@@ -1,6 +1,8 @@
 import { useState } from "react";
 import {useHistory} from "react-router-dom";
 
+let url = process.env.REACT_APP_API_URL_LOCALS;
+
 const userPost = () => {
     const [title, setTitle] = useState("");
     const [body, setBody] = useState("");
@@ -15,7 +17,8 @@ const userPost = () => {
 
         setIsPending(true)
 
-        fetch("http://localhost:8000/contact" , {
+		fetch(url, {
+
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(blog),

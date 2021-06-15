@@ -88,7 +88,7 @@ function AppContact() {
 
 		setIsPending(true);
 
-		fetch("http://206.189.90.147:5001/Test", {
+		fetch(`${url}/Test`, {
 			method: "POST",
 			headers: { "Content-Type": "application/json" },
 			body: JSON.stringify(infoCondition),
@@ -126,11 +126,13 @@ function AppContact() {
 			});
 	};
 
+	let url = process.env.REACT_APP_API_URL;
+
 	return (
 		<div id='contact' className='block contactBlock'>
 			<div className='container-fluid'>
 				<div className='titleHolder'>
-					<h2>Liên Hệ</h2>
+					<h1>Liên Hệ</h1>
 					<p>Để lại thông tin và SATSi sẽ liên hệ tư vấn</p>
 				</div>
 				<form

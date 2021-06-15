@@ -17,7 +17,7 @@ const AppTrend = () => {
 		<div id='air' className='block blockTrend'>
 			<div className='container-fluid'>
 				<div className='titleHolder'>
-					<h2 className='upperCase'>Hàng không - ngành học mơ ước</h2>
+					<h1 className='upperCase'>Hàng không - ngành học mơ ước</h1>
 				</div>
 				<Row justify='space-between'>
 					<Col sm={{ span: 24 }} md={{ span: 11 }}>

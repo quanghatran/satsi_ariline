@@ -51,7 +51,7 @@ function AppPartners() {
 		<div id='partner' className='block worksBlock blockPartners'>
 			<div className='container-fluid'>
 				<div className='titleHolder'>
-					<h2>Đối Tác Chiến Lược</h2>
+					<h1>Đối Tác Chiến Lược</h1>
 				</div>
 				<Slider {...settings}>
 					{listPartners.map((partner, index) => (

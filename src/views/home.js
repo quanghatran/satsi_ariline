@@ -9,10 +9,12 @@ import AppSteps from "../components/home/steps";
 import AppTestimonial from "../components/home/testimonial";
 import AppActions from "../components/home/actions";
 import AppTrend from "../components/home/trend";
+import HelmetComponent from "../components/common/hetmet";
 
 function AppHome() {
 	return (
 		<div className='main'>
+			<HelmetComponent />
 			<AppBanner />
 			<AppTrend />
 			<AppIncomes />

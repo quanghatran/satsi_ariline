@@ -34,7 +34,7 @@ const AppActions = () => {
 		<div id='actions' className='block blockTestimonial'>
 			<div className='container-fluid'>
 				<div className='titleHolder'>
-					<h2>Hoạt động đào tạo</h2>
+					<h1>Hoạt động đào tạo</h1>
 				</div>
 
 				<Slider {...settings}>

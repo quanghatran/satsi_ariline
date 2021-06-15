@@ -344,7 +344,7 @@ const AppHotBranch = () => {
 		<div id='selections' className='block hotBranchBlock'>
 			<div className='container-fluid'>
 				<div className='titleHolder'>
-					<h2 style={{ color: "#fff" }}>Các Ngành Học Hot</h2>
+					<h1 style={{ color: "#fff" }}>Các Ngành Học Hot</h1>
 				</div>
 				<div className='listJob'>
 					<Row gutter={[24, 24]}>
@@ -415,7 +415,7 @@ const AppHotBranch = () => {
 					<Row gutter={[16, 16]}>
 						<Col sm={{ span: 24 }} md={{ span: 12 }} lg={{ span: 8 }}>
 							<ul>
-								{allJobs.map((job, index) => {
+								{allJobs.forEach((job, index) => {
 									if (job.key % 3 === 1) {
 										return (
 											<li style={{ listStyle: "inside" }} key={job.key}>
@@ -428,7 +428,7 @@ const AppHotBranch = () => {
 						</Col>
 						<Col sm={{ span: 24 }} md={{ span: 12 }} lg={{ span: 8 }}>
 							<ul>
-								{allJobs.map((job, index) => {
+								{allJobs.forEach((job, index) => {
 									if (job.key % 3 === 2) {
 										return (
 											<li style={{ listStyle: "inside" }} key={job.key}>
@@ -441,7 +441,7 @@ const AppHotBranch = () => {
 						</Col>
 						<Col sm={{ span: 24 }} md={{ span: 12 }} lg={{ span: 8 }}>
 							<ul>
-								{allJobs.map((job, index) => {
+								{allJobs.forEach((job, index) => {
 									if (job.key % 3 === 0) {
 										return (
 											<li style={{ listStyle: "inside" }} key={job.key}>
@@ -452,20 +452,6 @@ const AppHotBranch = () => {
 								})}
 							</ul>
 						</Col>
-
-						{/* <Col sm={{ span: 24 }} md={{ span: 12 }} lg={{ span: 8 }}>
-							<ul>
-								{allJobs.map((job, index) => {
-									if (job.key % 3 === 0) {
-										return (
-											<li style={{ listStyle: "inside" }} key={job.key}>
-												{job.nameJob}
-											</li>
-										);
-									}
-								})}
-							</ul>
-						</Col> */}
 					</Row>
 				</Modal>
 			</div>
