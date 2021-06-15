@@ -6,9 +6,9 @@ const AppFooter = () => {
 		<div className='container-fluid'>
 			<div className='footer'>
 				<div className='titleHolder'>
-					<h2 style={{ color: "#fff" }}>
+					<h1 style={{ color: "#fff" }}>
 						SATSi - Viện Đào tạo Khởi nghiệp và Ứng dụng Khoa học Công nghệ cao
-					</h2>
+					</h1>
 				</div>
 				<Row gutter={[24, 24]}>
 					<Col
@@ -24,12 +24,12 @@ const AppFooter = () => {
 								alt=''
 							/>
 						</div>
-						<h2
+						<h1
 							className='sloganTitle'
 							style={{ color: "#fff", fontStyle: "italic" }}
 						>
 							LỰA CHỌN VÌ TƯƠNG LAI
-						</h2>
+						</h1>
 					</Col>
 					<Col
 						className='contactWrapper'

@@ -857,7 +857,7 @@ li {
   filter: brightness(.5);
 }
 
-.hotBranchBlock h2 {
+.hotBranchBlock h1 {
   color: #000 !important;
 }
 
