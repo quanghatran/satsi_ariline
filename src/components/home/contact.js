@@ -40,10 +40,8 @@ function AppContact() {
 				(tattoo === "Không có" || tattoo === "Nhỏ, ở vị trí kín") &&
 				health === "tốt"
 			) {
-				console.log(1);
 				return true;
 			} else {
-				console.log(2);
 				return false;
 			}
 		}
@@ -57,7 +55,6 @@ function AppContact() {
 			) {
 				return true;
 			} else {
-				console.log(4);
 				return false;
 			}
 		}
@@ -100,7 +97,6 @@ function AppContact() {
 				return res.json();
 			})
 			.then((data) => {
-				console.log(data);
 				setIsPending(false);
 
 				// clear fix
@@ -122,7 +118,6 @@ function AppContact() {
 			})
 			.catch((e) => {
 				setIsPending(false);
-				console.log(e);
 			});
 	};
 

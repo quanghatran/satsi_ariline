@@ -42,10 +42,8 @@ const OnlinePreQua = (props) => {
 				(tattoo === "Không có" || tattoo === "Nhỏ, ở vị trí kín") &&
 				health === "tốt"
 			) {
-				console.log(1);
 				return true;
 			} else {
-				console.log(2);
 				return false;
 			}
 		}
@@ -59,7 +57,6 @@ const OnlinePreQua = (props) => {
 			) {
 				return true;
 			} else {
-				console.log(4);
 				return false;
 			}
 		}
@@ -102,7 +99,6 @@ const OnlinePreQua = (props) => {
 				return res.json();
 			})
 			.then((data) => {
-				console.log(data);
 				setIsPending(false);
 
 				// clear fix
@@ -124,7 +120,6 @@ const OnlinePreQua = (props) => {
 			})
 			.catch((e) => {
 				setIsPending(false);
-				console.log(e);
 			});
 	};
 
