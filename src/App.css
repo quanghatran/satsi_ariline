@@ -289,7 +289,7 @@ hero
   margin-top: 100px;
 }
 
-.heroBlock h3 {
+.heroBlock h1 {
   font-size: 1.8rem;
   line-height: 1.2;
   margin: 0 0 30px;
@@ -997,7 +997,7 @@ li {
     background-position: 73% 65%;
   }
    
-  .heroBlock h3 {
+  .heroBlock h1 {
     font-size: 1.3rem;
     font-weight: 500;
     max-width: 400px;
@@ -1062,7 +1062,7 @@ li {
     display: none;
   }
 
-  .heroBlock .content h3 {
+  .heroBlock .content h1 {
     margin-bottom: 0;
     font-size: 1.1rem;
   }

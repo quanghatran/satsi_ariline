@@ -16,7 +16,7 @@ function AppBanner() {
 				{items.map((item) => (
 					<div className='container-fluid' key={item.key}>
 						<div className='content'>
-							<h3>{item.title}</h3>
+							<h1>{item.title}</h1>
 							{/* <p>{item.content}</p> */}
 							<ul dangerouslySetInnerHTML={{ __html: item.content }}></ul>
 							<div className='btnHolder'>
