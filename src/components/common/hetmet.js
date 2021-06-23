@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet";
 const HelmetComponent = () => {
 	return (
 		<Helmet>
-			<title>vieclam24-7</title>
+			<title>Hàng Không - SATSi</title>
 
 			<meta
 				name='description'
