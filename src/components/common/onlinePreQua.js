@@ -14,7 +14,7 @@ const OnlinePreQua = (props) => {
 	const [tattoo, setTattoo] = useState("Không có");
 	const [knowledge, setKnowledge] = useState("THPT");
 	const [language, setLanguage] = useState("Chưa có chứng chỉ");
-	const [howToKnow, setHowToKnow] = useState("Google");
+	const [howToKnow, setHowToKnow] = useState("Người giới thiệu");
 
 	const [success, setSuccess] = useState(false);
 
@@ -279,9 +279,9 @@ const OnlinePreQua = (props) => {
 					value={howToKnow}
 					onChange={(e) => setHowToKnow(e.target.value)}
 				>
+					<option value='Người giới thiệu'>Người giới thiệu</option>
 					<option value='Google'>Google</option>
 					<option value='Facebook'>Facebook</option>
-					<option value='Người giới thiệu'>Người giới thiệu</option>
 				</select>
 				{howToKnow === "Người giới thiệu" && (
 					<input
