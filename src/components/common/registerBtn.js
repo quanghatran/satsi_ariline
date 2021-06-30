@@ -15,6 +15,7 @@ function RegisterBtn() {
 	const handleCancel = () => {
 		setIsModalVisible(false);
 	};
+
 	const [name, setName] = useState("");
 	const [phoneNumber, setPhoneNumber] = useState("");
 	const [email, setEmail] = useState("");
