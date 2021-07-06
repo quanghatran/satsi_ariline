@@ -6,9 +6,15 @@ const HelmetComponent = () => {
 		<Helmet>
 			<title>Hàng Không - SATSi</title>
 
+			<meta property='og:image' content='./logo_satsi.png' />
+
+			<meta property='og:image:width' content='180' />
+
+			<meta property='og:image:height' content='110' />
+
 			<meta
 				name='description'
-				content='Hàng ngàn bạn trẻ đã được hiện thực hóa ước mơ làm việc trong ngành Hàng không với mức thu nhập ổn định ngay sau khi ra trường'
+				content='Đào tạo nghiệp vụ Hàng Không - chắp cánh ước mơ vào ngành Hàng Không'
 			/>
 		</Helmet>
 	);
